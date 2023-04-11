@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16 = 0.625 = 62.5%; */
+  /* font-size: 10px; */
+  /* 16 x 0.625 = 10px; */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: titillium;
+  src: url("../fonts/Titillium.ttf");
+}
+* {
+  font-family: titillium;
+  font-size: 12pt;
+}
+body {
+  margin: 0;
+  /* background-image: url("./img/couple1.jpg"); */
+  background-color: rgb(122, 102, 121);
+  background-size: cover;
+  min-height: 800px;
+}
+nav {
+  display: flex;
+}
+nav > a {
+  display: block;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  color: #fff;
+  margin: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+nav > a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #000;
+  transition: all 0.3s ease;
+}
+#ch {
+  display: none;
+}
+#lab {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(
+    #fff 0%,
+    #fff 20%,
+    transparent 21%,
+    transparent 40%,
+    #fff 41%,
+    #fff 60%,
+    transparent 61%,
+    transparent 80%,
+    #fff 81%,
+    #fff 100%
+  );
+  margin: 4px;
+  display: none;
+}
+
+@media all and (max-width: 960px) {
+  nav {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translate(-1000px, 0);
+    transition: all 0.5s ease;
+  }
+  nav > a {
+    width: auto;
+  }
+  #ch:checked + nav {
+    transform: translate(0, 0);
+    transition: all 0.5s ease;
+  }
+  #lab {
+    display: block;
+  }
+}
+
+/* HERO SECTION */
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 10rem 0;
+}
+.heading-primary {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+.hero {
+  /* max-width: makes it flexible and adapt to the viewport */
+  /* max-width: 120rem; */
+  max-width: 120rem;
+  display: grid;
+  /* center it in the veiw port */
+  /* margin: 5rem auto; */
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); */
+  align-items: center;
+  /* gap: 9.6rem; */
+  gap: 9.6rem;
+  margin-top: 11rem;
+}
+.hero-img {
+  /* 100% because I want it to fill its parent element which is hero-img-box */
+  width: 100%;
+  border-radius: 2rem;
+}
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+.cta-btn:link,
+.cta-btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  transition: background-color 0.3s;
+}
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+.btn-full:hover,
+.btn-full:active {
+  background-color: #cf711f;
+}
+.btn-outline:link,
+.btn-outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #fdf2e9;
+
+  /* border: 3px solid #fff; */
+
+  /* Trick to add border inside  */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
